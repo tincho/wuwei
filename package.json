@@ -1,0 +1,7 @@
+{
+    "name": "wuwei",
+    "version": "0",
+    "devDependencies": {
+        "mocha": "*",
+    }
+}
