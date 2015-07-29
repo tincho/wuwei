@@ -40,3 +40,20 @@ Whome, by the way, provides much more useful tools "_.every" and "_.some", that
     fuerza y debilidad son abstracciones del control,
     música y habla son abstracciones de la armonía,
     antes y después son abstracciones de la secuencia...”  Tao Te Ching.
+
+Usage:
+git clone
+
+run tests:
+npm install -g mocha
+mocha
+
+via node:
+require("w")
+
+example
+w.si(w.and(expression1, expression2), function() {
+    // they are true
+}, function() {
+    // they are not
+});

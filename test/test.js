@@ -51,11 +51,11 @@ describe('and', function() {
   });
 });
 
-describe('fi', function() {
+describe('si', function() {
   it('should exec then', function() {
     var global = 1;
     var test = 2;
-    _.fi(test === 2, function(){
+    _.si(test === 2, function(){
       global = 2;
     });
     assert.equal(global, 2);
@@ -63,7 +63,7 @@ describe('fi', function() {
   it('should not exec if false', function() {
     var global = 1;
     var test = 2;
-    _.fi(test === 1, function(){
+    _.si(test === 1, function(){
       global = 2;
     });
     assert.equal(global, 1);
@@ -72,7 +72,7 @@ describe('fi', function() {
   it('should exec else', function() {
     var global = 1;
     var test = 2;
-    _.fi(test === 1, function(){
+    _.si(test === 1, function(){
       global = 2;
     }, function() {
       global = 3;
@@ -83,11 +83,11 @@ describe('fi', function() {
   it('works with and and or', function() {
       var data = [true, true, true, false, true, true];
       var p = 1;
-      _.fi(_.and.apply([], data), function() {
+      _.si(_.and.apply([], data), function() {
           p = 2;
       }, function() {
           var orData = [false, false, false, false, false, true, false];
-          _.fi(_.or(orData), function() {
+          _.si(_.or(orData), function() {
               p = 3;
           });
       });
